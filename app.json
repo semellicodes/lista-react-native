@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Questao 05 - Simulador de conta",
-    "slug": "questao05",
+    "name": "Lista React Native",
+    "slug": "lista-react-native",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",

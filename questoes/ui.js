@@ -1,43 +1,7 @@
-// Questao 01 - Calculadora de consumo diario de agua (35 mL por kg)
-import { useState } from 'react';
-import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
+// Componentes e estilos compartilhados pelas questoes
+import { Text, Pressable, StyleSheet } from 'react-native';
 
-export default function App() {
-  const [peso, setPeso] = useState('');
-  const [resultado, setResultado] = useState('');
-  const [erro, setErro] = useState('');
-
-  function calcular() {
-    const p = parseFloat(peso.replace(',', '.'));
-    if (peso.trim() === '' || isNaN(p) || p <= 0) {
-      setErro('Informe um peso maior que zero.');
-      setResultado('');
-      return;
-    }
-    const litros = (p * 35) / 1000;
-    setErro('');
-    setResultado(`Voce deve beber cerca de ${litros.toFixed(2).replace('.', ',')} litros por dia.`);
-  }
-
-  return (
-    <View style={s.container}>
-      <Text style={s.titulo}>Consumo diario de agua</Text>
-      <Text style={s.subtitulo}>Estimativa de 35 mL por quilograma</Text>
-      <TextInput
-        style={s.input}
-        placeholder="Peso em kg"
-        keyboardType="numeric"
-        value={peso}
-        onChangeText={setPeso}
-      />
-      <Botao title="Calcular" onPress={calcular} />
-      {erro !== '' && <Text style={s.erro}>{erro}</Text>}
-      {resultado !== '' && <Text style={s.resultado}>{resultado}</Text>}
-    </View>
-  );
-}
-
-function Botao({ title, onPress, tipo }) {
+export function Botao({ title, onPress, tipo }) {
   const secundario = tipo === 'secundario';
   return (
     <Pressable
@@ -49,8 +13,8 @@ function Botao({ title, onPress, tipo }) {
   );
 }
 
-const s = StyleSheet.create({
-  container: { flexGrow: 1, backgroundColor: '#F1F5F9', padding: 20, paddingTop: 56, gap: 12 },
+export const s = StyleSheet.create({
+  container: { flexGrow: 1, backgroundColor: '#F1F5F9', padding: 20, gap: 12 },
   titulo: { fontSize: 24, fontWeight: '700', color: '#0F172A' },
   subtitulo: { fontSize: 14, color: '#64748B', marginBottom: 4 },
   input: {

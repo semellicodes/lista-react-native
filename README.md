@@ -1,36 +1,33 @@
 # Lista de exercícios 01 - React Native
 
-As 9 questões da lista da disciplina de Desenvolvimento para Dispositivos Móveis, do curso de Sistemas de Informação da UFRA.
+Aplicativo Expo com as 9 questões da lista da disciplina de Desenvolvimento para Dispositivos Móveis, do curso de Sistemas de Informação da UFRA.
 
-Cada questão é um projeto Expo independente dentro da pasta `projetos/`, com seu próprio `App.js`, `package.json` e README. Todas usam `View`, `Text`, `TextInput`, `Pressable`, `StyleSheet` e `useState`, com as validações pedidas em cada enunciado.
+O `App.js` mostra um menu, e cada questão abre a partir dele. Todas usam `View`, `Text`, `TextInput`, `Pressable`, `StyleSheet` e `useState`, com as validações pedidas em cada enunciado.
 
 ## Questões
 
-| Nº | Questão | Projeto |
+| Nº | Questão | Arquivo |
 |---|---|---|
-| 1 | Consumo diário de água, 35 mL por kg | `projetos/questao01` |
-| 2 | Média de três notas e situação do aluno | `projetos/questao02` |
-| 3 | Controle de estoque de um produto | `projetos/questao03` |
-| 4 | Conversor entre Celsius e Fahrenheit | `projetos/questao04` |
-| 5 | Simulador de conta bancária | `projetos/questao05` |
-| 6 | Eleição com três candidatos | `projetos/questao06` |
-| 7 | Cálculo de desconto e preço final | `projetos/questao07` |
-| 8 | Cadastro de estudantes em cards | `projetos/questao08` |
-| 9 | Pedido de lanchonete | `projetos/questao09` |
+| 1 | Consumo diário de água, 35 mL por kg | `questoes/questao01.js` |
+| 2 | Média de três notas e situação do aluno | `questoes/questao02.js` |
+| 3 | Controle de estoque de um produto | `questoes/questao03.js` |
+| 4 | Conversor entre Celsius e Fahrenheit | `questoes/questao04.js` |
+| 5 | Simulador de conta bancária | `questoes/questao05.js` |
+| 6 | Eleição com três candidatos | `questoes/questao06.js` |
+| 7 | Cálculo de desconto e preço final | `questoes/questao07.js` |
+| 8 | Cadastro de estudantes em cards | `questoes/questao08.js` |
+| 9 | Pedido de lanchonete | `questoes/questao09.js` |
 
-## Como rodar uma questão
+O arquivo `questoes/ui.js` guarda o botão e os estilos usados por todas as telas.
+
+## Como rodar
 
 ```bash
-cd projetos/questao01
 npm install
 npx expo start
 ```
 
 Leia o QR Code com o Expo Go no celular, ou aperte `a` para abrir no emulador Android.
-
-## Como abrir no Expo Snack
-
-Crie um Snack novo em snack.expo.dev, apague o conteúdo do `App.js` e cole o `App.js` da questão. Cada arquivo é autossuficiente, não depende de nenhum outro.
 
 ## Capturas de tela
 
