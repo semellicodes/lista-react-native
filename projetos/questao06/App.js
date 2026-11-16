@@ -1,6 +1,6 @@
 // Questao 06 - Urna com tres candidatos ficticios
 import { useState } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Pressable, StyleSheet } from 'react-native';
 
 export default function App() {
   const [votos, setVotos] = useState([0, 0, 0]);
@@ -19,13 +19,17 @@ export default function App() {
   return (
     <View style={s.container}>
       <Text style={s.titulo}>Eleicao estudantil</Text>
+      <Text style={s.subtitulo}>Toque no nome para registrar um voto</Text>
       {nomes.map((nome, i) => (
-        <View key={nome} style={s.linha}>
-          <Button title={`Votar em ${nome}`} onPress={() => votar(i)} />
-          <Text>{votos[i]} votos</Text>
+        <View key={nome} style={s.card}>
+          <Text style={s.rotulo}>{votos[i]} votos</Text>
+          <Botao title={`Votar em ${nome}`} onPress={() => votar(i)} />
         </View>
       ))}
-      <Text style={s.resultado}>Total de votos: {total}</Text>
+      <View style={s.card}>
+        <Text style={s.rotulo}>Total de votos</Text>
+        <Text style={s.destaque}>{total}</Text>
+      </View>
       {total > 0 && (
         <Text style={s.resultado}>
           {lideres.length > 1
@@ -37,12 +41,57 @@ export default function App() {
   );
 }
 
+function Botao({ title, onPress, tipo }) {
+  const secundario = tipo === 'secundario';
+  return (
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [s.botao, secundario && s.botaoSecundario, pressed && s.botaoPressionado]}
+    >
+      <Text style={[s.botaoTexto, secundario && s.botaoTextoSecundario]}>{title}</Text>
+    </Pressable>
+  );
+}
+
 const s = StyleSheet.create({
-  container: { flex: 1, padding: 20, backgroundColor: '#fff', gap: 10 },
-  titulo: { fontSize: 20, fontWeight: 'bold', marginBottom: 10 },
-  input: { borderWidth: 1, borderColor: '#999', borderRadius: 6, padding: 10 },
-  resultado: { marginTop: 15, fontSize: 16 },
-  erro: { marginTop: 15, fontSize: 16, color: 'red' },
-  linha: { flexDirection: 'row', gap: 10, alignItems: 'center' },
-  card: { borderWidth: 1, borderColor: '#ccc', borderRadius: 6, padding: 10, marginTop: 10 },
+  container: { flexGrow: 1, backgroundColor: '#F1F5F9', padding: 20, paddingTop: 56, gap: 12 },
+  titulo: { fontSize: 24, fontWeight: '700', color: '#0F172A' },
+  subtitulo: { fontSize: 14, color: '#64748B', marginBottom: 4 },
+  input: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#CBD5E1',
+    borderRadius: 10,
+    padding: 14,
+    fontSize: 16,
+    color: '#0F172A',
+  },
+  botao: { backgroundColor: '#2563EB', borderRadius: 10, paddingVertical: 14, alignItems: 'center' },
+  botaoSecundario: { backgroundColor: '#fff', borderWidth: 1, borderColor: '#CBD5E1' },
+  botaoPressionado: { opacity: 0.8 },
+  botaoTexto: { color: '#fff', fontSize: 16, fontWeight: '600' },
+  botaoTextoSecundario: { color: '#334155' },
+  resultado: {
+    backgroundColor: '#ECFDF5',
+    borderWidth: 1,
+    borderColor: '#A7F3D0',
+    borderRadius: 10,
+    padding: 14,
+    fontSize: 16,
+    color: '#065F46',
+  },
+  erro: {
+    backgroundColor: '#FEF2F2',
+    borderWidth: 1,
+    borderColor: '#FECACA',
+    borderRadius: 10,
+    padding: 14,
+    fontSize: 15,
+    color: '#B91C1C',
+  },
+  card: { backgroundColor: '#fff', borderRadius: 12, borderWidth: 1, borderColor: '#E2E8F0', padding: 14, gap: 8 },
+  destaque: { fontSize: 20, fontWeight: '700', color: '#0F172A' },
+  rotulo: { fontSize: 14, color: '#64748B' },
+  secao: { fontSize: 18, fontWeight: '700', color: '#0F172A', marginTop: 8 },
+  nome: { fontSize: 16, fontWeight: '600', color: '#0F172A' },
 });

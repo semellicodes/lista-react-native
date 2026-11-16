@@ -1,6 +1,6 @@
 # Questão 04 - Conversor de temperatura
 
-Projeto React Native com Expo, feito para a lista de exercícios 01 da disciplina de Desenvolvimento para Dispositivos Móveis (Sistemas de Informação, UFRA).
+Projeto React Native com Expo, da lista de exercícios 01 da disciplina de Desenvolvimento para Dispositivos Móveis, no curso de Sistemas de Informação da UFRA.
 
 Todo o código está no `App.js`.
 
@@ -13,6 +13,10 @@ npx expo start
 
 Leia o QR Code com o Expo Go, ou aperte `a` para abrir no emulador Android.
 
+## Como abrir no Expo Snack
+
+Crie um Snack novo em snack.expo.dev, apague o conteúdo do `App.js` e cole o `App.js` deste projeto. Ele não depende de nenhum outro arquivo.
+
 ## Captura de tela
 
-(adicionar o print do app rodando)
+![Questão 04](../../prints/questao04.png)
