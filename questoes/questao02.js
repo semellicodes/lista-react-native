@@ -26,7 +26,7 @@ export default function Questao02() {
     const media = (notas[0] + notas[1] + notas[2]) / 3;
     const situacao = media >= 7 ? 'Aprovado' : 'Reprovado';
     setErro('');
-    setResultado(`${nome}: media ${media.toFixed(1)} - ${situacao}`);
+    setResultado(`${nome}: media ${media.toFixed(1).replace('.', ',')} - ${situacao}`);
   }
 
   return (

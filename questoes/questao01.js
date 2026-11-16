@@ -17,7 +17,7 @@ export default function Questao01() {
     }
     const litros = (p * 35) / 1000;
     setErro('');
-    setResultado(`Voce deve beber cerca de ${litros.toFixed(2)} litros por dia.`);
+    setResultado(`Voce deve beber cerca de ${litros.toFixed(2).replace('.', ',')} litros por dia.`);
   }
 
   return (

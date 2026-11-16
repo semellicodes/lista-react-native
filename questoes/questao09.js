@@ -36,19 +36,19 @@ export default function Questao09() {
       <Text style={s.titulo}>Pedido da lanchonete</Text>
       <TextInput style={s.input} placeholder="Quantidade" keyboardType="numeric" value={quantidade} onChangeText={setQuantidade} />
       {PRODUTOS.map((p) => (
-        <Button key={p.nome} title={`${p.nome} - R$ ${p.preco.toFixed(2)}`} onPress={() => adicionar(p)} />
+        <Button key={p.nome} title={`${p.nome} - R$ ${p.preco.toFixed(2).replace('.', ',')}`} onPress={() => adicionar(p)} />
       ))}
       {erro !== '' && <Text style={s.erro}>{erro}</Text>}
       <Text style={s.titulo}>Resumo</Text>
       {itens.map((i) => (
         <View key={i.id} style={s.card}>
           <Text>
-            {i.quantidade}x {i.nome} = R$ {(i.preco * i.quantidade).toFixed(2)}
+            {i.quantidade}x {i.nome} = R$ {(i.preco * i.quantidade).toFixed(2).replace('.', ',')}
           </Text>
           <Button title="Remover" onPress={() => remover(i.id)} />
         </View>
       ))}
-      <Text style={s.resultado}>Total: R$ {total.toFixed(2)}</Text>
+      <Text style={s.resultado}>Total: R$ {total.toFixed(2).replace('.', ',')}</Text>
     </ScrollView>
   );
 }

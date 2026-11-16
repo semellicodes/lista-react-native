@@ -1,6 +1,6 @@
 // Menu simples para abrir cada questao da lista
 import { useState } from 'react';
-import { View, Text, Button, ScrollView, SafeAreaView, StyleSheet } from 'react-native';
+import { View, Text, Button, ScrollView, StyleSheet } from 'react-native';
 
 import Questao01 from './questoes/questao01';
 import Questao02 from './questoes/questao02';
@@ -30,24 +30,24 @@ export default function App() {
   if (atual !== null) {
     const Componente = QUESTOES[atual].componente;
     return (
-      <SafeAreaView style={estilos.tela}>
+      <View style={estilos.tela}>
         <View style={estilos.topo}>
           <Button title="Voltar ao menu" onPress={() => setAtual(null)} />
         </View>
         <Componente />
-      </SafeAreaView>
+      </View>
     );
   }
 
   return (
-    <SafeAreaView style={estilos.tela}>
+    <View style={estilos.tela}>
       <ScrollView contentContainerStyle={estilos.menu}>
         <Text style={estilos.titulo}>Lista de exercicios - React Native</Text>
         {QUESTOES.map((q, i) => (
           <Button key={q.titulo} title={q.titulo} onPress={() => setAtual(i)} />
         ))}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }
 

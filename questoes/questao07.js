@@ -26,7 +26,7 @@ export default function Questao07() {
     const economia = (p * d) / 100;
     setErro('');
     setResultado(
-      `${produto || 'Produto'}: economia de R$ ${economia.toFixed(2)} - preco final R$ ${(p - economia).toFixed(2)}`
+      `${produto || 'Produto'}: economia de R$ ${economia.toFixed(2).replace('.', ',')} - preco final R$ ${(p - economia).toFixed(2).replace('.', ',')}`
     );
   }
 

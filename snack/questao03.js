@@ -5,6 +5,7 @@ import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 export default function Questao03() {
   const [produto, setProduto] = useState('');
   const [estoque, setEstoque] = useState(0);
+  const [definido, setDefinido] = useState(false);
   const [inicial, setInicial] = useState('');
   const [movimento, setMovimento] = useState('');
   const [erro, setErro] = useState('');
@@ -17,6 +18,7 @@ export default function Questao03() {
     }
     setErro('');
     setEstoque(q);
+    setDefinido(true);
   }
 
   function adicionar() {
@@ -57,7 +59,7 @@ export default function Questao03() {
       <Text style={s.resultado}>
         {produto || 'Produto'}: {estoque} unidades
       </Text>
-      {estoque < 5 && <Text style={s.erro}>Alerta: estoque baixo (menos de 5 unidades).</Text>}
+      {definido && estoque < 5 && <Text style={s.erro}>Alerta: estoque baixo (menos de 5 unidades).</Text>}
       {erro !== '' && <Text style={s.erro}>{erro}</Text>}
     </View>
   );

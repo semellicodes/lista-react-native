@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Questao 04 - Conversor de temperatura",
+    "slug": "questao04",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {},
+    "web": {}
+  }
+}

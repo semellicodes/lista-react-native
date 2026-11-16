@@ -38,7 +38,7 @@ export default function Questao05() {
   return (
     <View style={s.container}>
       <Text style={s.titulo}>Simulador de conta</Text>
-      <Text style={s.resultado}>Saldo: R$ {saldo.toFixed(2)}</Text>
+      <Text style={s.resultado}>Saldo: R$ {saldo.toFixed(2).replace('.', ',')}</Text>
       <TextInput style={s.input} placeholder="Valor" keyboardType="numeric" value={valor} onChangeText={setValor} />
       <View style={s.linha}>
         <Button title="Depositar" onPress={depositar} />

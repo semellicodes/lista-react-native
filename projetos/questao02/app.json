@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Questao 02 - Media do estudante",
+    "slug": "questao02",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {},
+    "web": {}
+  }
+}
