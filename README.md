@@ -31,34 +31,18 @@ Leia o QR Code com o Expo Go no celular, ou aperte `a` para abrir no emulador An
 
 ## Capturas de tela
 
-As imagens abaixo foram tiradas no emulador Android, com o aplicativo rodando pelo Expo Go.
+As imagens foram tiradas no emulador Android, com o aplicativo rodando pelo Expo Go.
 
 ### Tela inicial
-![Menu com as nove questões](prints/listaexercicio.png)
 
-### Questão 1 - Consumo diário de água
-![Questão 1](prints/questao01.png)
+<img src="prints/listaexercicio.png" width="260">
 
-### Questão 2 - Média do estudante
-![Questão 2](prints/questao02.png)
+### Questões
 
-### Questão 3 - Controle de estoque
-![Questão 3](prints/questao03.png)
-
-### Questão 4 - Conversor de temperatura
-![Questão 4](prints/questao04.png)
-
-### Questão 5 - Simulador de conta
-![Questão 5](prints/questao05.png)
-
-### Questão 6 - Eleição estudantil
-![Questão 6](prints/questao06.png)
-
-### Questão 7 - Cálculo de desconto
-![Questão 7](prints/questao07.png)
-
-### Questão 8 - Cadastro de estudantes
-![Questão 8](prints/questao08.png)
-
-### Questão 9 - Pedido da lanchonete
-![Questão 9](prints/questao09.png)
+|  |  |
+|:--:|:--:|
+| **1. Consumo diário de água**<br><img src="prints/questao01.png" width="260"> | **2. Média do estudante**<br><img src="prints/questao02.png" width="260"> |
+| **3. Controle de estoque**<br><img src="prints/questao03.png" width="260"> | **4. Conversor de temperatura**<br><img src="prints/questao04.png" width="260"> |
+| **5. Simulador de conta**<br><img src="prints/questao05.png" width="260"> | **6. Eleição estudantil**<br><img src="prints/questao06.png" width="260"> |
+| **7. Cálculo de desconto**<br><img src="prints/questao07.png" width="260"> | **8. Cadastro de estudantes**<br><img src="prints/questao08.png" width="260"> |
+| **9. Pedido da lanchonete**<br><img src="prints/questao09.png" width="260"> |  |
