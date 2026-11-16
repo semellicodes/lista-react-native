@@ -31,6 +31,11 @@ Leia o QR Code com o Expo Go no celular, ou aperte `a` para abrir no emulador An
 
 ## Capturas de tela
 
+As imagens abaixo foram tiradas no emulador Android, com o aplicativo rodando pelo Expo Go.
+
+### Tela inicial
+![Menu com as nove questões](prints/listaexercicio.png)
+
 ### Questão 1 - Consumo diário de água
 ![Questão 1](prints/questao01.png)
 
