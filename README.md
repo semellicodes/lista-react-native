@@ -18,6 +18,10 @@ Cada questão está em um arquivo separado dentro da pasta `questoes/`, e o `App
 | `questoes/questao08.js` | Cadastro de estudantes em cards |
 | `questoes/questao09.js` | Pedido de lanchonete |
 
+## Versões para o Expo Snack
+
+A pasta `snack/` tem a mesma coisa, mas com cada questão em um arquivo único e os estilos dentro dele. Serve para colar direto no `App.js` de um Snack novo, sem precisar criar arquivo nenhum.
+
 ## Como rodar
 
 ```bash
